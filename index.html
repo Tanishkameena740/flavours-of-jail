@@ -14,9 +14,14 @@
   font-family:Arial,sans-serif;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   background:#111;
   color:white;
+  line-height:1.6;
 }
 
 header{
@@ -27,8 +32,8 @@ header{
   text-align:center;
   padding:30px;
   background:
-    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8)),
-    url("image.png");
+  linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+  url("unnamed%20(1).jpg");
   background-size:cover;
   background-position:center;
 }
@@ -36,32 +41,31 @@ header{
 .hero h1{
   font-size:55px;
   color:#f5b942;
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 
 .hero p{
   font-size:24px;
-  margin-bottom:15px;
 }
 
 .rating{
+  margin:15px 0 25px;
   font-size:20px;
-  margin-bottom:25px;
 }
 
 .btn{
   display:inline-block;
+  padding:12px 22px;
+  margin:6px;
   background:#f5b942;
   color:#111;
   text-decoration:none;
-  padding:13px 24px;
   border-radius:30px;
-  margin:6px;
   font-weight:bold;
 }
 
 section{
-  padding:60px 8%;
+  padding:60px 7%;
   text-align:center;
 }
 
@@ -72,11 +76,11 @@ h2{
 }
 
 .about{
-  background:#1c1c1c;
+  background:#1b1b1b;
 }
 
 .about p{
-  max-width:800px;
+  max-width:850px;
   margin:auto;
   font-size:18px;
 }
@@ -84,61 +88,90 @@ h2{
 .gallery{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  max-width:1000px;
-  margin:auto;
+  gap:18px;
 }
 
 .gallery img{
   width:100%;
-  height:300px;
+  height:270px;
   object-fit:cover;
   border-radius:15px;
   border:2px solid #444;
+  transition:.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.03);
 }
 
 .menu{
-  background:#1c1c1c;
+  background:#1b1b1b;
 }
 
 .menu-image{
-  max-width:700px;
+  max-width:600px;
   width:100%;
   border-radius:15px;
   border:3px solid #f5b942;
-  margin-bottom:25px;
+  margin-bottom:30px;
 }
 
-.card-container{
+.cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  max-width:1000px;
+  gap:18px;
+  max-width:1100px;
   margin:auto;
 }
 
 .card{
-  background:#252525;
-  padding:25px;
+  background:#242424;
+  padding:22px;
   border-radius:15px;
   border:1px solid #444;
+  text-align:left;
 }
 
 .card h3{
   color:#f5b942;
-  margin-bottom:10px;
+  margin-bottom:8px;
 }
 
-.location{
+.info-section{
   background:#111;
 }
 
-.contact{
-  max-width:700px;
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:18px;
+  max-width:1200px;
   margin:auto;
-  background:#222;
-  padding:30px;
+}
+
+.info-card{
+  background:#202020;
+  padding:22px;
   border-radius:15px;
+  text-align:left;
+  border:1px solid #444;
+}
+
+.info-card h3{
+  color:#f5b942;
+  margin-bottom:12px;
+}
+
+.info-card ul{
+  padding-left:20px;
+}
+
+.contact{
+  max-width:750px;
+  margin:auto;
+  background:#202020;
+  padding:30px;
+  border-radius:18px;
 }
 
 .contact p{
@@ -147,15 +180,20 @@ h2{
 }
 
 footer{
+  background:#070707;
   text-align:center;
-  background:#080808;
   padding:25px;
   color:#aaa;
 }
 
 @media(max-width:600px){
+
   .hero h1{
     font-size:38px;
+  }
+
+  .hero p{
+    font-size:20px;
   }
 
   h2{
@@ -167,130 +205,361 @@ footer{
 
 <body>
 
+<!-- HOME -->
+
 <header>
-  <div class="hero">
 
-    <h1>🍽️ Flavours Of Jail</h1>
+<div class="hero">
 
-    <p>Jail Cafe India</p>
+<h1>🔒 Flavours Of Jail</h1>
 
-    <div class="rating">
-      ⭐ <strong>4.7</strong> / 5 &nbsp; | &nbsp; 7,444 Reviews
-    </div>
+<p>Jail Cafe India</p>
 
-    <a href="#menu" class="btn">🍔 View Menu</a>
+<div class="rating">
+⭐ <strong>4.7</strong> / 5 &nbsp; | &nbsp; 7,444 Reviews
+</div>
 
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=MVWG%2BV6%20Indore%2C%20Madhya%20Pradesh"
-      target="_blank"
-      class="btn">
-      📍 Google Maps
-    </a>
+<a href="#menu" class="btn">🍔 View Menu</a>
 
-  </div>
+<a
+href="https://www.google.com/maps/search/?api=1&query=MVWG%2BV6%20Indore%2C%20Madhya%20Pradesh"
+target="_blank"
+class="btn">
+📍 Google Maps
+</a>
+
+</div>
+
 </header>
 
 
+<!-- ABOUT -->
+
 <section class="about">
 
-  <h2>About Flavours Of Jail</h2>
+<h2>About Flavours Of Jail</h2>
 
-  <p>
-    Welcome to <strong>Flavours Of Jail</strong>, also known as
-    <strong>Jail Cafe India</strong>.
-    Enjoy delicious food with a unique jail-themed ambience,
-    perfect for spending time with friends and family.
-  </p>
+<p>
+Welcome to <strong>Flavours Of Jail</strong>, also known as
+<strong>Jail Cafe India</strong>. Enjoy delicious food in a unique
+jail-themed cafe atmosphere with friends and family.
+</p>
 
 </section>
 
+
+<!-- PHOTOS -->
 
 <section>
 
-  <h2>📸 Our Cafe</h2>
+<h2>📸 Our Cafe</h2>
 
-  <div class="gallery">
+<div class="gallery">
 
-    <img src="image.png" alt="Flavours Of Jail Cafe">
+<img src="image.png" alt="Flavours Of Jail Cafe">
 
-  </div>
+<img src="unnamed%20(1).jpg" alt="Flavours Of Jail">
+
+<img src="unnamed%20(2).jpg" alt="Jail Cafe Interior">
+
+<img src="unnamed%20(3).jpg" alt="Cafe Interior">
+
+<img src="unnamed%20(4).jpg" alt="Cafe">
+
+<img src="unnamed%20(5).jpg" alt="Cafe">
+
+<img src="unnamed%20(6).jpg" alt="Cafe">
+
+<img src="unnamed%20(7).jpg" alt="Cafe">
+
+<img src="unnamed%20(8).jpg" alt="Cafe">
+
+<img src="unnamed%20(9).jpg" alt="Cafe">
+
+<img src="unnamed%20(10).jpg" alt="Cafe">
+
+<img src="unnamed%20(11).jpg" alt="Cafe">
+
+<img src="unnamed%20(12).jpg" alt="Cafe">
+
+</div>
 
 </section>
 
+
+<!-- MENU -->
 
 <section id="menu" class="menu">
 
-  <h2>🍕 Our Menu</h2>
+<h2>🍕 Our Menu</h2>
 
-  <img src="image.png" class="menu-image" alt="Flavours Of Jail Menu">
+<img
+src="unnamed%20(10).jpg"
+class="menu-image"
+alt="Flavours Of Jail Menu">
 
-  <div class="card-container">
+<div class="cards">
 
-    <div class="card">
-      <h3>🔥 Bahubali Sandwich</h3>
-      <p>Our special and popular sandwich.</p>
-    </div>
+<div class="card">
+<h3>🔥 Bahubali Sandwich</h3>
+<p>Special signature sandwich.</p>
+</div>
 
-    <div class="card">
-      <h3>🍟 Corn Fries</h3>
-      <p>Crispy and delicious corn fries.</p>
-    </div>
+<div class="card">
+<h3>🌽 Corn Fries</h3>
+<p>Crispy and delicious corn fries.</p>
+</div>
 
-    <div class="card">
-      <h3>🍕 Pizza</h3>
-      <p>Fresh and cheesy pizza.</p>
-    </div>
+<div class="card">
+<h3>🍕 Pizza</h3>
+<p>Fresh and cheesy pizza.</p>
+</div>
 
-    <div class="card">
-      <h3>🍽️ More Items</h3>
-      <p>See our original menu above for all available items and prices.</p>
-    </div>
+<div class="card">
+<h3>☕ Coffee</h3>
+<p>Hot and refreshing coffee.</p>
+</div>
 
-  </div>
+</div>
+
+<p style="margin-top:25px;">
+<strong>Note:</strong> Please check the displayed menu image for
+current item names and prices.
+</p>
 
 </section>
 
 
-<section class="location">
+<!-- FACILITIES -->
 
-  <h2>📍 Visit Us</h2>
+<section class="info-section">
 
-  <div class="contact">
+<h2>✨ Cafe Facilities & Information</h2>
 
-    <p>
-      <strong>Flavours Of Jail</strong><br>
-      Jail Cafe India
-    </p>
+<div class="info-grid">
 
-    <p>
-      1-2, Shakuntala Complex, AB Rd,<br>
-      Near Holkar College, Angad Kapoor Region,<br>
-      Janki Nagar, Indore,<br>
-      Madhya Pradesh 452001
-    </p>
 
-    <p>
-      <strong>📞 09893997949</strong>
-    </p>
+<div class="info-card">
+<h3>♿ Accessibility</h3>
+<ul>
+<li>Wheelchair-accessible car park</li>
+<li>Wheelchair-accessible entrance</li>
+<li>Wheelchair-accessible seating</li>
+<li>Wheelchair-accessible toilet</li>
+<li>Assistive hearing loop</li>
+</ul>
+</div>
 
-    <a href="tel:09893997949" class="btn">
-      📞 Call Now
-    </a>
 
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=MVWG%2BV6%20Indore%2C%20Madhya%20Pradesh"
-      target="_blank"
-      class="btn">
-      🗺️ Get Directions
-    </a>
+<div class="info-card">
+<h3>🛎️ Service Options</h3>
+<ul>
+<li>Outdoor seating</li>
+<li>Kerbside pickup</li>
+<li>No-contact delivery</li>
+<li>Delivery</li>
+<li>Drive-through</li>
+<li>On-site services</li>
+<li>Takeaway</li>
+<li>Dine-in</li>
+</ul>
+</div>
 
-  </div>
+
+<div class="info-card">
+<h3>⭐ Highlights</h3>
+<ul>
+<li>Fireplace</li>
+<li>Great coffee</li>
+<li>Great dessert</li>
+<li>Great tea selection</li>
+<li>Live music</li>
+<li>Live performances</li>
+<li>Sport</li>
+</ul>
+</div>
+
+
+<div class="info-card">
+<h3>🍳 Popular For</h3>
+<ul>
+<li>Breakfast</li>
+<li>Dinner</li>
+<li>Solo dining</li>
+<li>Good for working on laptop</li>
+</ul>
+</div>
+
+
+<div class="info-card">
+<h3>☕ Offerings</h3>
+<ul>
+<li>Coffee</li>
+<li>Happy-hour food</li>
+<li>Late-night food</li>
+<li>Organic dishes</li>
+<li>Prepared foods</li>
+<li>Private dining room</li>
+<li>Quick bite</li>
+<li>Small plates</li>
+<li>Vegan options</li>
+<li>Vegetarian options</li>
+<li>Dishes</li>
+</ul>
+</div>
+
+
+<div class="info-card">
+<h3>🍽️ Dining Options</h3>
+<ul>
+<li>Breakfast</li>
+<li>Brunch</li>
+<li>Lunch</li>
+<li>Dinner</li>
+<li>Catering</li>
+<li>Dessert</li>
+<li>Seating</li>
+<li>Table service</li>
+</ul>
+</div>
+
+
+<div class="info-card">
+<h3>📶 Amenities</h3>
+<ul>
+<li>Gender-neutral toilets</li>
+<li>Restroom</li>
+<li>Wi-Fi</li>
+<li>Free Wi-Fi</li>
+</ul>
+</div>
+
+
+<div class="info-card">
+<h3>✨ Atmosphere</h3>
+<ul>
+<li>Casual</li>
+<li>Cozy</li>
+<li>Quiet</li>
+<li>Romantic</li>
+<li>Trendy</li>
+<li>Upmarket</li>
+</ul>
+</div>
+
+
+<div class="info-card">
+<h3>👥 Crowd</h3>
+<ul>
+<li>Family friendly</li>
+<li>Groups</li>
+<li>LGBTQ+ friendly</li>
+<li>Tourists</li>
+<li>University students</li>
+</ul>
+</div>
+
+
+<div class="info-card">
+<h3>📅 Planning</h3>
+<ul>
+<li>Accepts reservations</li>
+</ul>
+</div>
+
+
+<div class="info-card">
+<h3>💳 Payments</h3>
+<ul>
+<li>Credit cards</li>
+<li>Debit cards</li>
+<li>Google Pay</li>
+<li>Meal coupons</li>
+<li>NFC mobile payments</li>
+</ul>
+</div>
+
+
+<div class="info-card">
+<h3>👶 Children</h3>
+<ul>
+<li>Good for kids</li>
+<li>High chairs</li>
+<li>Kids' menu</li>
+</ul>
+</div>
+
+
+<div class="info-card">
+<h3>🚗 Parking</h3>
+<ul>
+<li>Free parking lot</li>
+<li>Free street parking</li>
+<li>Plenty of parking</li>
+<li>Valet parking</li>
+</ul>
+</div>
+
+
+<div class="info-card">
+<h3>🐶 Pets</h3>
+<ul>
+<li>Dogs allowed inside</li>
+<li>Dogs allowed outside</li>
+</ul>
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- LOCATION -->
+
+<section>
+
+<h2>📍 Visit Us</h2>
+
+<div class="contact">
+
+<p>
+<strong>Flavours Of Jail (Jail Cafe India)</strong>
+</p>
+
+<p>
+1-2, Shakuntala Complex, AB Rd,<br>
+Near Holkar College, Angad Kapoor Region,<br>
+Janki Nagar, Indore,<br>
+Madhya Pradesh 452001
+</p>
+
+<p>
+📞 <strong>09893997949</strong>
+</p>
+
+<a
+href="tel:09893997949"
+class="btn">
+📞 Call Now
+</a>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=MVWG%2BV6%20Indore%2C%20Madhya%20Pradesh"
+target="_blank"
+class="btn">
+🗺️ Get Directions
+</a>
+
+</div>
 
 </section>
 
 
 <footer>
-  © 2026 Flavours Of Jail | Jail Cafe India
+
+© 2026 Flavours Of Jail | Jail Cafe India
+
 </footer>
 
 </body>
