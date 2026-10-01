@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Flavours Of Jail | Jail Cafe India</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#111;
+  color:white;
+}
+
+header{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:30px;
+  background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8)),
+    url("image.png");
+  background-size:cover;
+  background-position:center;
+}
+
+.hero h1{
+  font-size:55px;
+  color:#f5b942;
+  margin-bottom:12px;
+}
+
+.hero p{
+  font-size:24px;
+  margin-bottom:15px;
+}
+
+.rating{
+  font-size:20px;
+  margin-bottom:25px;
+}
+
+.btn{
+  display:inline-block;
+  background:#f5b942;
+  color:#111;
+  text-decoration:none;
+  padding:13px 24px;
+  border-radius:30px;
+  margin:6px;
+  font-weight:bold;
+}
+
+section{
+  padding:60px 8%;
+  text-align:center;
+}
+
+h2{
+  color:#f5b942;
+  font-size:36px;
+  margin-bottom:30px;
+}
+
+.about{
+  background:#1c1c1c;
+}
+
+.about p{
+  max-width:800px;
+  margin:auto;
+  font-size:18px;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.gallery img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  border-radius:15px;
+  border:2px solid #444;
+}
+
+.menu{
+  background:#1c1c1c;
+}
+
+.menu-image{
+  max-width:700px;
+  width:100%;
+  border-radius:15px;
+  border:3px solid #f5b942;
+  margin-bottom:25px;
+}
+
+.card-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.card{
+  background:#252525;
+  padding:25px;
+  border-radius:15px;
+  border:1px solid #444;
+}
+
+.card h3{
+  color:#f5b942;
+  margin-bottom:10px;
+}
+
+.location{
+  background:#111;
+}
+
+.contact{
+  max-width:700px;
+  margin:auto;
+  background:#222;
+  padding:30px;
+  border-radius:15px;
+}
+
+.contact p{
+  margin:12px 0;
+  font-size:18px;
+}
+
+footer{
+  text-align:center;
+  background:#080808;
+  padding:25px;
+  color:#aaa;
+}
+
+@media(max-width:600px){
+  .hero h1{
+    font-size:38px;
+  }
+
+  h2{
+    font-size:30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+
+    <h1>🍽️ Flavours Of Jail</h1>
+
+    <p>Jail Cafe India</p>
+
+    <div class="rating">
+      ⭐ <strong>4.7</strong> / 5 &nbsp; | &nbsp; 7,444 Reviews
+    </div>
+
+    <a href="#menu" class="btn">🍔 View Menu</a>
+
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=MVWG%2BV6%20Indore%2C%20Madhya%20Pradesh"
+      target="_blank"
+      class="btn">
+      📍 Google Maps
+    </a>
+
+  </div>
+</header>
+
+
+<section class="about">
+
+  <h2>About Flavours Of Jail</h2>
+
+  <p>
+    Welcome to <strong>Flavours Of Jail</strong>, also known as
+    <strong>Jail Cafe India</strong>.
+    Enjoy delicious food with a unique jail-themed ambience,
+    perfect for spending time with friends and family.
+  </p>
+
+</section>
+
+
+<section>
+
+  <h2>📸 Our Cafe</h2>
+
+  <div class="gallery">
+
+    <img src="image.png" alt="Flavours Of Jail Cafe">
+
+  </div>
+
+</section>
+
+
+<section id="menu" class="menu">
+
+  <h2>🍕 Our Menu</h2>
+
+  <img src="image.png" class="menu-image" alt="Flavours Of Jail Menu">
+
+  <div class="card-container">
+
+    <div class="card">
+      <h3>🔥 Bahubali Sandwich</h3>
+      <p>Our special and popular sandwich.</p>
+    </div>
+
+    <div class="card">
+      <h3>🍟 Corn Fries</h3>
+      <p>Crispy and delicious corn fries.</p>
+    </div>
+
+    <div class="card">
+      <h3>🍕 Pizza</h3>
+      <p>Fresh and cheesy pizza.</p>
+    </div>
+
+    <div class="card">
+      <h3>🍽️ More Items</h3>
+      <p>See our original menu above for all available items and prices.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="location">
+
+  <h2>📍 Visit Us</h2>
+
+  <div class="contact">
+
+    <p>
+      <strong>Flavours Of Jail</strong><br>
+      Jail Cafe India
+    </p>
+
+    <p>
+      1-2, Shakuntala Complex, AB Rd,<br>
+      Near Holkar College, Angad Kapoor Region,<br>
+      Janki Nagar, Indore,<br>
+      Madhya Pradesh 452001
+    </p>
+
+    <p>
+      <strong>📞 09893997949</strong>
+    </p>
+
+    <a href="tel:09893997949" class="btn">
+      📞 Call Now
+    </a>
+
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=MVWG%2BV6%20Indore%2C%20Madhya%20Pradesh"
+      target="_blank"
+      class="btn">
+      🗺️ Get Directions
+    </a>
+
+  </div>
+
+</section>
+
+
+<footer>
+  © 2026 Flavours Of Jail | Jail Cafe India
+</footer>
+
+</body>
+</html>
